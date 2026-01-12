@@ -1,0 +1,8 @@
+{
+  "name": "Campus Utility Platform",
+  "description": "SVCE Final Year Project: Student resource sharing and accommodation platform with AI Chatbot.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
