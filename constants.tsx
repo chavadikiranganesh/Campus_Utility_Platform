@@ -27,33 +27,33 @@ export interface Accommodation {
 export const LATEST_RESOURCES: Resource[] = [
   {
     id: '1',
-    title: 'Engineering Books (Semester 1-4)',
-    category: 'Book',
-    price: 200,
+    title: 'Drafting Geometry Set',
+    category: 'Tools',
+    price: 300,
     condition: 'Like New',
     sellerName: 'Rahul Kumar',
     sellerContact: '9876543210',
-    image: 'https://picsum.photos/seed/books/400/300'
+    image: '/images/drafter.webp'
   },
   {
     id: '2',
-    title: 'Scientific Calculator fx-991ES',
+    title: 'Scientific Calculator',
     category: 'Calculator',
     price: 500,
     condition: 'Used',
     sellerName: 'Sneha S',
     sellerContact: '9123456780',
-    image: 'https://picsum.photos/seed/calc/400/300'
+    image: '/images/calci.jpg'
   },
   {
     id: '3',
-    title: 'Drafting Tools Set',
-    category: 'Tools',
+    title: 'Top 50 Interview Questions',
+    category: 'book',
     price: 150,
     condition: 'Used',
     sellerName: 'Amit V',
     sellerContact: '8887776665',
-    image: 'https://picsum.photos/seed/tools/400/300'
+    image: '/images/Gemini_Generated_Image_ivde03ivde03ivde.png'
   }
 ];
 

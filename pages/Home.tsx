@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           </div>
           <div className="flex-1">
              <img 
-               src="https://picsum.photos/seed/svce/600/400" 
+               src="pages\images\ChatGPT Image Jan 13, 2026, 01_13_02 PM.png" 
                alt="Campus Illustration" 
                className="rounded-2xl shadow-2xl border-4 border-white transform hover:scale-105 transition duration-500"
              />
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
           <div className="w-2 h-2 rounded-full bg-blue-400"></div> Tailwind CSS
         </div>
         <div className="flex items-center gap-2 text-slate-600 font-semibold">
-          <div className="w-2 h-2 rounded-full bg-indigo-500"></div> Gemini AI
+          <div className="w-2 h-2 rounded-full bg-indigo-500"></div> Machine Learning
         </div>
         <div className="flex items-center gap-2 text-slate-600 font-semibold">
           <div className="w-2 h-2 rounded-full bg-slate-800"></div> SQL Database
