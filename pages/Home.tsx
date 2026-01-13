@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           </div>
           <div className="flex-1">
              <img 
-               src="pages\images\ChatGPT Image Jan 13, 2026, 01_13_02 PM.png" 
+               src="/images/ChatGPT Image Jan 13, 2026, 01_13_02 PM.png" 
                alt="Campus Illustration" 
                className="rounded-2xl shadow-2xl border-4 border-white transform hover:scale-105 transition duration-500"
              />
