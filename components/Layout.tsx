@@ -33,8 +33,17 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const token = localStorage.getItem('token');
     const savedUser = localStorage.getItem('user');
     if (token && savedUser) {
-      setUser(JSON.parse(savedUser));
-      setIsLoggedIn(true);
+      try {
+        const parsedUser = JSON.parse(savedUser);
+        setUser(parsedUser);
+        setIsLoggedIn(true);
+      } catch (error) {
+        // If parsing fails, clear localStorage
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        setUser(null);
+        setIsLoggedIn(false);
+      }
     }
   }, []);
 
@@ -110,17 +119,23 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       if (response.ok) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.user));
+        
+        // Update state immediately
         setUser(data.user);
         setIsLoggedIn(true);
         setShowRegisterModal(false);
         setRegisterData({ name: '', email: '', password: '', confirmPassword: '', rollNumber: '', department: 'Data Science' });
-        alert('Registration successful! Welcome to Campus Utility!');
+        
+        // Show success message after a brief delay to ensure UI updates
+        setTimeout(() => {
+          alert('Registration successful! Welcome to Campus Utility!');
+        }, 500);
       } else {
-        alert(data.message || 'Registration failed');
+        alert(`Registration failed: ${data.message || 'Unknown error'}`);
       }
     } catch (error) {
       console.error('Registration error:', error);
-      alert('Network error. Please try again.');
+      alert(`Network error: ${error.message}. Please check if the server is running.`);
     }
   };
 
